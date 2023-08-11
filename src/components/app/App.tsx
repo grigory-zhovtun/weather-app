@@ -83,7 +83,7 @@ export const cities: City[] = [
 
 const App = () => {
 
-    const citiesNames = cities.map(city => city.name)
+    const citiesNames = cities.map(city => city.name).sort()
     const [city, setCity] = React.useState(citiesNames[0]);
     const [weather, setWeather] = React.useState(0);
     const [timeAndDate, setTimeAndDate] = React.useState<TimeAndDate>({
