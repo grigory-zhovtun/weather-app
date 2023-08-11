@@ -7,6 +7,9 @@ interface SelectProps {
 }
 
 const StyledSelect = styled.select`
+    margin-top: 56px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 261px;
     height: 50px;
     flex-shrink: 0;

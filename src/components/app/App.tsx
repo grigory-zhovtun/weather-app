@@ -1,9 +1,23 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 import { Select } from '../select/Select';
 import { Icon } from '../icon/Icon';
 import { Count } from '../count/Count';
 import { TimeDate } from '../time-date/TimeDate';
 import { getWeather, getTimeAndDate } from '../../services/connector';
+
+const Wrapper = styled.div`
+    display: grid;
+    grid-template-column: repeat(3, 100px);
+    justify-content: center;
+    width: 324px;
+    height: 700px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+`;
+
+
 
 export interface TimeAndDate {
     currentTime: string;
@@ -125,12 +139,12 @@ const App = () => {
 
 
     return (
-        <div>
+        <Wrapper>
             <Select getCIty={selectHandler} options={citiesNames} />
             <TimeDate cityData={timeAndDate} />
             <Icon />
             <Count weatherCount={weather} />
-        </div>
+        </Wrapper>
     );
 };
 

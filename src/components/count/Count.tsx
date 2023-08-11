@@ -5,7 +5,9 @@ type CountProps = {
     weatherCount: number
 }
 
-const WeatherCount = styled.span`
+const WeatherCount = styled.div`
+
+    text-align: center;
     color: #000;
     font-family: Inter;
     font-size: 78px;
@@ -16,8 +18,8 @@ const WeatherCount = styled.span`
 
 export const Count = ({weatherCount}: CountProps) => {
     return (
-        <div>
+
             <WeatherCount>{weatherCount}°C</WeatherCount>
-        </div>
+     
     );
 };
